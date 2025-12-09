@@ -1,0 +1,20 @@
+# Ruby Web3 Template
+
+Projeto criado pelo **gbit-smart CLI**.
+
+### Instalar as dependências
+
+bundle install
+
+
+### Criar arquivo `.env`
+
+
+RPC_URL=https://seu_rpc
+PRIVATE_KEY=SUACHAVE
+
+
+### Rodar o script
+
+
+ruby main.rb

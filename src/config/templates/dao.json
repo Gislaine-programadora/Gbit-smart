@@ -1,0 +1,8 @@
+{
+  "type": "Governance",
+  "token": "GbitToken",
+  "proposalThreshold": 1000,
+  "votingPeriod": "7d",
+  "quorum": "20%",
+  "network": "ethereum-mainnet"
+}

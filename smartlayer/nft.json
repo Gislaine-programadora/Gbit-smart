@@ -1,0 +1,8 @@
+{
+  "type": "ERC721",
+  "name": "GbitCollectibles",
+  "baseURI": "ipfs://example...",
+  "mintable": true,
+  "royalty": "5%",
+  "network": "ethereum-mainnet"
+}

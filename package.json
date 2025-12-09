@@ -1,0 +1,31 @@
+{
+  "name": "gbit-smart",
+  "version": "1.0.0",
+  "description": "Framework Web3 modular para criação e deploy de Tokens, NFTs e DAOs na Ethereum Mainnet.",
+  "author": "Gislaine Developer",
+  "license": "MIT",
+  "bin": {
+    "gbit": "./bin/gbit.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
+    "ethers": "^6.7.0",
+    "execa": "^9.6.0",
+    "inquirer": "^9.2.12",
+    "open": "^11.0.0",
+    "ora": "^8.0.1"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test --no-compile",
+    "typechain": "npx hardhat typechain",
+    "deploy:goerli:erc20": "npx hardhat run --network goerli scripts/deploy/deployERC20.js",
+    "deploy:goerli:erc721": "npx hardhat run --network goerli scripts/deploy/deployERC721.js"
+  },
+  "devDependencies": {
+    "hardhat": "^3.0.15"
+  }
+}

@@ -1,0 +1,23 @@
+{
+"name": "gbit-smart",
+"version": "1.0.0",
+"description": "Gbit Smart CLI — cria, gera, compila e faz deploy de contratos (Hardhat + Foundry)",
+"bin": {
+"gbit": "./bin/gbit.js"
+},
+"type": "module",
+"scripts": {
+"start": "node ./bin/gbit.js"
+},
+"keywords": ["gbit","cli","web3","hardhat","foundry"],
+"author": "Gislaine",
+"license": "MIT",
+"dependencies": {
+"chalk": "^5.2.0",
+"inquirer": "^9.0.0",
+"ora": "^6.1.2",
+"execa": "^7.1.1",
+"fs-extra": "^11.1.1",
+"open": "^9.0.0"
+}
+}
