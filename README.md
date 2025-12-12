@@ -46,6 +46,39 @@ Simples, rápido e poderoso para
 automação Web3.
 
 
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="120" viewBox="0 0 760 120" role="img" aria-label="gbit-smart npm badge">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f1724"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- fundo -->
+  <rect rx="12" width="760" height="120" fill="url(#g1)" />
+
+  <!-- bloco NPM -->
+  <g transform="translate(16,14)">
+    <rect width="112" height="92" rx="10" fill="#e44d26" />
+    <text x="56" y="58" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-weight="700" font-size="36" fill="white">npm</text>
+  </g>
+
+  <!-- texto do pacote -->
+  <g transform="translate(140,30)" filter="url(#shadow)">
+    <text x="0" y="28" font-family="Inter, Roboto, Arial" font-size="26" font-weight="700" fill="#E6F0FF">gbit-smart</text>
+    <text x="0" y="60" font-family="Inter, Roboto, Arial" font-size="14" fill="#AFC7DF">Framework modular Web3 · CLI · Hardhat · SmartLayer</text>
+  </g>
+
+  <!-- caixa de comando -->
+  <g transform="translate(520,28)">
+    <rect x="0" y="0" width="220" height="64" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.04)"/>
+    <text x="16" y="22" font-family="Courier New, Courier, monospace" font-size="14" fill="#CDE8FF">Instalar</text>
+    <text x="16" y="46" font-family="Courier New, Courier, monospace" font-size="14" fill="#FFF">npm install -g gbit-smart</text>
+  </g>
+</svg>
 
 
 
