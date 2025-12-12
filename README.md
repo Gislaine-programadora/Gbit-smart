@@ -1,8 +1,6 @@
 🌐 Gbit Smart — Framework Web3 Completo
 
-<p align="center">
-  <img src="https://svg-banners.vercel.app/api?type=glitch&text=GBIT%20SMART%20%7C%20WEB3%20FRAMEWORK&width=1200&height=250" />
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0.2-blue.svg" />
