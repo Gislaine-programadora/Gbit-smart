@@ -1,7 +1,7 @@
 🌐 Gbit Smart — Framework Web3 Completo
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ecad5563-3d9e-4ba0-a2b9-688cdd53ac56" width="800" alt="GBIT SMART Banner">
+  <img src="https://github.com/user-attachments/assets/ecad5563-3d9e-4ba0-a2b9-688cdd53ac56" width="500" alt="GBIT SMART Banner">
 </p>
 
 
