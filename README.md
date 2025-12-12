@@ -43,11 +43,7 @@ automação Web3.
 
 
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.2-blue.svg" />
-  <img src="https://img.shields.io/badge/status-stable-success.svg" />
-  <img src="https://img.shields.io/badge/Web3-Ethereum-blueviolet.svg" />
-</p>
+
 
 
 🚀 Instalação
