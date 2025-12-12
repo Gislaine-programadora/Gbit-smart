@@ -47,6 +47,7 @@ automação Web3.
 
 
 
+[![npm version](https://img.shields.io/npm/v/gbit-smart.svg?style=for-the-badge&color=blue)](https://www.npmjs.com/package/gbit-smart)
 
  
     
