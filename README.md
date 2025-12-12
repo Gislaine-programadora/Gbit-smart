@@ -1,9 +1,8 @@
 🌐 Gbit Smart — Framework Web3 Completo
 
 
-<p align="center">
-  <img src="COLE_AQUI_A_URL_DA_IMAGEM" alt="GBIT SMART Banner" width="100%">
-</p>
+![Uploading ChatGPT Image 12 de dez. de 2025, 16_56_53.png…]()
+
 
 
 
