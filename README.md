@@ -51,6 +51,7 @@ automação Web3.
 
  
     
+<img width="678" height="135" alt="a4b16257-0801-4189-8ee8-3d30ba8a6c44" src="https://github.com/user-attachments/assets/5b71ff82-c358-40cf-a2da-fd3eaea68fb5" />
 
 
 
