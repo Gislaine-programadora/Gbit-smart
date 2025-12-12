@@ -1,6 +1,9 @@
 🌐 Gbit Smart — Framework Web3 Completo
 
+
 https://chatgpt.com/backend-api/estuary/content?id=file_00000000842c71f58bfbcadc30d7bb0b&ts=490435&p=fs&cid=1&sig=de79f681f8e14cb0e2db88b3110132c989c6aac6ec5df78e9fe66faeab6f3b48&v=0
+
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0.2-blue.svg" />
