@@ -17,7 +17,7 @@
  <img width="200" height="200" alt="caixinha gbit-smart" src="https://github.com/user-attachments/assets/3439d293-4351-4be5-afc4-09097bd910ae" />
 
 
-    ![version](https://img.shields.io/badge/version-1.0.2-blue.svg)
+   ![version](https://img.shields.io/badge/version-1.0.2-blue.svg)
 
 
 
