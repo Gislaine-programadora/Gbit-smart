@@ -1,25 +1,19 @@
-import dotenv from "dotenv";
-dotenv.config();
+import { loadContract } from "../utils/loadContract.js";
+import { connect } from "../web3/connect.js";
 
-import { ethers } from "ethers";
-import loadContract from "../utils/loadContract.js";
+console.log("🚀 Gbit Smart - Iniciando CLI");
 
-export default async function interactCmd() {
-  console.log("\n🔗 Interagindo com o contrato...\n");
+const web3 = connect();
 
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_LOCAL);
-  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+// Exemplo de uso
+const contract = loadContract("CoinGbit");
 
-  const contract = await loadContract(wallet);
+console.log("Contrato carregado com sucesso!");
+console.log(contract);
 
-  console.log("📌 Endereço do Contrato:", contract.target);
+export default function interact() {
+  console.log("🚀 Gbit Smart - CLI iniciado");
 
-  const name = await contract.name();
-  const symbol = await contract.symbol();
-  const totalSupply = await contract.totalSupply();
-
-  console.log("🏷  Nome:", name);
-  console.log("🔠 Símbolo:", symbol);
-  console.log("💰 Supply Total:", totalSupply.toString());
+  // coloque aqui toda a lógica do CLI
 }
 
