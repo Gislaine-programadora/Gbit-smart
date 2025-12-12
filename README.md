@@ -7,7 +7,7 @@
 
 
 
-  <img width="1024" height="1024" alt="caixinha gbit-smart" src="https://github.com/user-attachments/assets/3439d293-4351-4be5-afc4-09097bd910ae" />
+  <img width="500" height="500" alt="caixinha gbit-smart" src="https://github.com/user-attachments/assets/3439d293-4351-4be5-afc4-09097bd910ae" />
 
 
 
