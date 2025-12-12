@@ -41,9 +41,7 @@ Simples, rápido e poderoso para
 automação Web3.
 
 
-<p align="center">
-  <img src="https://svg-banners.vercel.app/api?type=origin&text=GBIT%20SMART&width=1000&height=250" />
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-1.0.2-blue.svg" />
