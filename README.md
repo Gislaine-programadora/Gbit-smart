@@ -1,7 +1,7 @@
 🌐 Gbit Smart — Framework Web3 Completo
 
+<img width="1536" height="1024" alt="ChatGPT Image 12 de dez  de 2025, 16_56_53" src="https://github.com/user-attachments/assets/ecad5563-3d9e-4ba0-a2b9-688cdd53ac56" />
 
-![Uploading ChatGPT Image 12 de dez. de 2025, 16_56_53.png…]()
 
 
 
