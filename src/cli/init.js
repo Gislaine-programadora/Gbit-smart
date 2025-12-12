@@ -6,7 +6,7 @@ import path from "path";
 import ora from "ora";
 import { fileURLToPath } from "url";
 
-// reconstruir __dirname (ESM não tem por padrão)
+// reconstruir __dirname (ESM)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -24,6 +24,7 @@ export default async function initCmd() {
 
   const basePath = process.cwd();
   const configDir = path.join(basePath, "smartlayer");
+
   if (!fs.existsSync(configDir)) fs.mkdirSync(configDir);
 
   const spinner = ora("Criando estrutura SmartLayer...").start();
@@ -34,7 +35,7 @@ export default async function initCmd() {
     if (layer === "NFT ERC721") configFile = "nft.json";
     if (layer === "DAO Governance") configFile = "dao.json";
 
-    // Caminho REAL dos templates instalados no pacote global
+    // Caminho REAL dos templates do pacote
     const templatesDir = path.join(__dirname, "..", "config", "templates");
     const srcPath = path.join(templatesDir, configFile);
 
@@ -44,11 +45,9 @@ export default async function initCmd() {
       console.log(chalk.yellow(`📂 Configuração salva em: ${configDir}/${configFile}\n`));
     } catch (err) {
       spinner.fail(
-        chalk.redBright("❌ Não foi possível copiar o template. Verifique se existe a pasta config/templates no pacote.")
+        chalk.redBright("❌ Não foi possível copiar o template. Verifique se existe a pasta config/templates.")
       );
       console.error(err);
     }
-  }, 800);
+  }, 500);
 }
-
-

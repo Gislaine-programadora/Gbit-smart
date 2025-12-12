@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-
-// Importação dos comandos
 import initCmd from "../src/cli/init.js";
 import createCmd from "../src/cli/create.js";
 import generateCmd from "../src/cli/generate.js";
@@ -10,14 +8,6 @@ import compileCmd from "../src/cli/compile.js";
 import deployCmd from "../src/cli/deploy.js";
 import abiCmd from "../src/cli/abi.js";
 import explorerCmd from "../src/cli/explorer.js";
-import { getBalance } from "../src/cli/balance.js";
-import transferCmd from "../src/cli/transfer.js";
-import mintCmd from "../src/cli/mint.js";
-import verify from "../src/cli/verify.js";
-import contractCmd from "../src/cli/contract.js";
-import inspectCmd from "../src/cli/inspect.js";
-import deployAutoCmd from "../src/cli/deploy-auto.js";
-import interactCmd from "../src/cli/interact.js";
 
 const program = new Command();
 
@@ -25,8 +15,6 @@ program
   .name("gbit")
   .description("CLI oficial do Gbit Smart Framework")
   .version("1.0.0");
-
-// ----------------- Comandos -------------------
 
 program
   .command("init")
@@ -63,52 +51,10 @@ program
   .description("Abre o contrato no Etherscan")
   .action(() => explorerCmd());
 
-program
-  .command("balance <address>")
-  .description("Mostrar saldo GBIT de um endereço")
-  .action((address) => getBalance(address));
-
-program
-  .command("verify")
-  .description("Faz verificação automática no Etherscan")
-  .action(verify);
-
-program
-  .command("inspect <address>")
-  .description("Inspeciona bytecode, ABI, storage e metadata do contrato")
-  .action((address) => inspectCmd(address));
-
-program
-  .command("contract <address>")
-  .description("Exibe informações de um contrato")
-  .action(contractCmd);
-
-program
-  .command("deploy-auto")
-  .description("Executa deploy automático — captura endereço e salva")
-  .option("--network <network>", "Rede para deploy")
-  .action((opts) => deployAutoCmd(opts.network));
-
-program
-  .command("transfer <to> <amount>")
-  .description("Enviar tokens GBIT")
-  .action((to, amount) => transferCmd(to, amount));
-
-program
-  .command("interact")
-  .description("Interagir com o contrato GBIT")
-  .action(() => interactCmd());
-
-program
-  .command("mint <to> <amount>")
-  .description("Mintar tokens GBIT para um endereço")
-  .action(mintCmd);
-
-// --------------------------------------------
-
 program.parse(process.argv);
 
-// Se o usuário só digitar "gbit" → mostrar apenas o help
 if (!process.argv.slice(2).length) {
   program.outputHelp();
 }
+
+

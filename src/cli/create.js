@@ -9,9 +9,8 @@ import { ensureDirSync, copyDirSync } from "../utils/fs-extra.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Diretório raiz onde ficam os templates
+// Diretório raiz dos templates
 const TEMPLATES_DIR = path.join(__dirname, "..", "..", "templates");
-
 
 export default async function createProject() {
   console.log(chalk.cyan("\n🚀 Gbit Smart - Criar Novo Projeto Web3\n"));
@@ -21,20 +20,17 @@ export default async function createProject() {
     { name: "name", message: "Nome do projeto:", default: "mydapp" },
     { type: "confirm", name: "hardhat", message: "Incluir Hardhat?", default: true },
     { type: "confirm", name: "foundry", message: "Incluir Foundry?", default: false },
-    { type: "confirm", name: "env", message: "Gerar .env automático?", default: true },
     { type: "confirm", name: "example", message: "Incluir scripts de exemplo (deploy, mint, balance)?", default: true }
   ]);
 
-  // Caminho do diretório final do projeto
+  // Caminho do projeto
   const projectDir = path.join(process.cwd(), answers.name);
 
-  // Criar o diretório do projeto
+  // Criar pastas principais
   ensureDirSync(projectDir);
+  console.log(chalk.green(`📁 Criando estrutura em: ${projectDir}\n`));
 
-  console.log(chalk.green(`📁 Criando estrutura do projeto em: ${projectDir}\n`));
-
-  // Estrutura inicial
-  const baseFolders = ["contracts", "scripts", "smartlayer", "environment"];
+  const baseFolders = ["contracts", "scripts", "smartlayer"];
   baseFolders.forEach(folder => ensureDirSync(path.join(projectDir, folder)));
 
   // ------------------ PACKAGE.JSON --------------------
@@ -61,9 +57,7 @@ export default async function createProject() {
     const templatePath = path.join(TEMPLATES_DIR, "hardhat-basic");
     copyDirSync(templatePath, projectDir);
 
-    console.log(chalk.yellow("⬇ Instalando Hardhat na pasta do projeto..."));
-
-
+    console.log(chalk.yellow("⬇ Instalando Hardhat no projeto..."));
 
     try {
       await execa("npm", ["install", "--save-dev", "hardhat"], { cwd: projectDir });
@@ -83,29 +77,7 @@ export default async function createProject() {
     console.log(chalk.magenta("✔ Foundry básico adicionado!"));
   }
 
-  // ------------------ ENV TEMPLATE --------------------
-  if (answers.env) {
-    const envContent = `
-# RPCs
-RPC_LOCAL=http://127.0.0.1:8545
-RPC_SEPOLIA=https://rpc-sepolia.example
-
-# Private Key
-PRIVATE_KEY=
-
-# Blockchain API Keys
-ETHERSCAN_KEY=
-POLYGONSCAN_KEY=
-BSCSCAN_KEY=
-ARBISCAN_KEY=
-OPTIMISTIC_KEY=
-`;
-
-    fs.writeFileSync(path.join(projectDir, ".env"), envContent.trim());
-    console.log(chalk.green("🔐 Arquivo .env criado!"));
-  }
-
-  // ------------------ EXAMPLE SCRIPTS --------------------
+  // ------------------ EXAMPLES --------------------
   if (answers.example) {
     const scriptsPath = path.join(TEMPLATES_DIR, "example-scripts");
     copyDirSync(scriptsPath, path.join(projectDir, "scripts"));

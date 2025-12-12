@@ -1,4 +1,5 @@
 import fs from "fs";
+import { execa } from "execa";
 
 export default async function verify() {
   console.log("🔍 Verificando contrato no Etherscan...");

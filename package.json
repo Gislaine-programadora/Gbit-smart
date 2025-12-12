@@ -5,14 +5,27 @@
   "author": "Gislaine Developer",
   "license": "MIT",
   "bin": {
-    "gbit": "./bin/gbit.js"
-     
+    "gbit": "bin/gbit.js"
   },
   "type": "module",
+  "main": "bin/gbit.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gislaine-programadora/Gbit-smart.git"
+  },
+  "keywords": [
+    "web3",
+    "ethereum",
+    "cli",
+    "smart-contracts",
+    "nft",
+    "dao",
+    "token"
+  ],
   "dependencies": {
     "chalk": "^5.2.0",
     "commander": "^14.0.2",
-   "dotenv": "16.4.5",
+    "dotenv": "^16.4.5",
     "ethers": "^6.7.0",
     "execa": "^9.6.0",
     "inquirer": "^9.2.12",
